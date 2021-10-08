@@ -1,0 +1,38 @@
+// Using TDD count the number of duplicates elements in an array of type String of size 10
+
+package TwentyTwoSeptemberSecondAssignment;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CountDuplicateElementsInArrayTest {
+
+	CountDuplicateElementsInArray test=new CountDuplicateElementsInArray();  //refactor
+	@Test
+	public void countDuplicatevalue()
+	{
+		//fail("Not yet implemented");
+		String arrayData[]= {"aa","bb","cc","dd","aa","bbb","cccc","dd","cccc","sd"};
+		int expected=3;
+		int actual=test.arrayString(arrayData);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void countArraySize()
+	{
+		//fail("Not yet implemented");
+		String arrayData[]= {"aa","bb","cc","dd","aa","bbb","cccc","dd"};
+		try {
+			test.arrayString(arrayData);
+		    assertTrue(false);
+			}catch(RuntimeException e) {
+				assertTrue(true);
+			}	
+		
+	}
+		
+		
+	}
+
+
