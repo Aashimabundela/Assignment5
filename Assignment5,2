@@ -1,0 +1,24 @@
+// Using TDD count the number of duplicates elements in an array of type String of size 10
+
+package TwentyTwoSeptemberSecondAssignment;
+
+public class CountDuplicateElementsInArray {
+	public int arrayString(String myArray[])
+	{
+		int duplicateCount=0;
+		for(int i=0;i<10-1;i++)
+		{
+			for(int j=i+1;j<10;j++)
+			{
+				if((myArray[i].equals(myArray[j])) && i!=j)
+				{
+					 duplicateCount++;
+				}
+			}
+			
+		}
+		return duplicateCount;
+		
+	}
+
+}
