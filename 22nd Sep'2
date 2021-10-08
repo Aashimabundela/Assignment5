@@ -1,0 +1,31 @@
+package TwentyTwoSeptemberFirstAssignment;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+
+public class FourthLargestNumberFindTest {
+
+	FourthLargestNumberFind find =new FourthLargestNumberFind();
+	@Test
+	public void fourthLargestNumberTest() {
+		
+		int[] arrayTestData= {5,4,3,2,1};
+		int expected= 2;
+		int actual=find.arrayTest(arrayTestData);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void arraySortingNegative() {
+		int[] arrayTestData= {};
+		try {
+		find.arrayTest(arrayTestData);
+	    assertTrue(false);
+		}catch(RuntimeException e) {
+			assertTrue(true);
+		}		
+	}
+}
+
