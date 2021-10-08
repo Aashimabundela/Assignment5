@@ -1,0 +1,29 @@
+package TwentyTwoSeptemberFirstAssignment;
+
+public class FourthLargestNumberFind {
+
+	public  int arrayTest(int myArray[])
+	{
+		int arraySize= myArray.length;
+		
+		//Arrays.sort(myArray);
+		
+		for(int i=0;i<=arraySize;i++)
+		{
+			int temp=0;
+			for(int j=i+1;j<arraySize;j++)
+			{
+				if(myArray[i]>myArray[j])
+				{
+					temp= myArray[i];
+					myArray[i]=myArray[j];
+					myArray[j]=temp;
+					
+				}
+			}
+		} 
+		return myArray[arraySize -4];
+	}
+
+	
+	}
